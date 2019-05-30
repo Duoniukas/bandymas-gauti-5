@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1559260525 source:c:\users\donat\onedrive\desktop\programavimas 3-4 laborai\atsiskaitymas\main.cpp
+	"mano.h"
+
+1559259781 c:\users\donat\onedrive\desktop\programavimas 3-4 laborai\atsiskaitymas\mano.h
+	<iostream>
+	<iomanip>
+	<cmath>
+	<string>
+	<iterator>
+	<bits/stdc++.h>
+	<vector>
+	<algorithm>
+	<fstream>
+
