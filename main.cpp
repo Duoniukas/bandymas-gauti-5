@@ -121,5 +121,80 @@ for (int i=0; i<sk; i++)
 
               }
 
+              void RandomFailai(vector<studentai>lentele)
+                  vector<studentai>moksliukai;
+	              vector<studentai>nemoksliukai;
+    int temp_sum = 0;
+	double temp_vid1, temp_med1, temp_med2;
+      studentai temp;
+    chrono::steady_clock::time_point begin = chrono::steady_clock::now();
+    string numeris,txt={".txt"};
+    string a[10]="Vardas";
+    string b[10]="Pavarde";
+    string lievakai ,mokslinciai,duomenys;
+       int n=1;
+       for(int i=1; i<=5; i++)
+    {
+        n=n*10;
+                   ofstream myFyle;
+                myFyle.open ("Rezultatai.txt");
+            myFyle <<"Vardas Pavarde ND1 ND2 ND3 ND4 ND5 EGZAMINAS" <<endl;
+            for(int j=1; j<=k; j++)
+                myFyle << a[i]<<j<<" "<<b[i]<<j<<" "<<rand() % 10 + 1<<" "<<rand() % 10 + 1<<" "<<rand() % 10 + 1<<" "<<rand() % 10 + 1<<" "<<rand() % 10 + 1<<" "<<rand() % 10 + 1<<"\n";
+                myFyle.close();
+
+            {
+			cin>>temp.v>>temp.p;
+			temp.ndp.clear();
+			for(int i=0, temp_paz; i<5; i++)
+            {
+                in>>temp_paz;
+                temp.nd.push_back(temp_paz);
+            }
+            in>>temp.egzas;
+            temp_sum=0;
+			for (int i : temp.ndp)
+				temp_sum += i;
+			temp_vid1 = temp_sum * 1.0 / (temp.ndp.*0,4));
+			temp.vidutinis = temp_vid1 * 0.4 + temp.egzas*0.6;
+			if(temp.vidutinis>=5)
+                mokslinciai.push_back(temp);
+			else
+                lievakai.push_back(temp);
+                in.close();
+
+            ofstream myFyle2("proto_bokstai.txt");
+                myFyle2.fill(' ');
+        myFyle2.width(40);
+        myFyle2<<left<<setw(10)<<"Vardas"<<left<<setw(10)<<"Pavarde"<<right<<setw(20)<<"Galutinis (vid.)"
+            for (mokinys duomenys : mokslinciai)
+        myFyle2 << setw(10) << right << duomenys.v << setw(10) << right << duomenys.p << setw(20) << right << setprecision(3) << duomenys.vid << endl;
+        myFyle2.close();
+        myFyle2.fill('-');
+        myFyle2.width(40);
+        myFyle2<<""<<endl;
+        myFyle2.fill(' ');
+        myFyle2.width(40);
+        myFyle2<<left<<setw(10)<<duomenys.v<<setw(10)<<duomenys.p<<right<<setw(20)<<duomenys.vidutinis<<right<<setw(20)<<endl;
+
+
+           ofstream myFyle3("lievakai.txt");
+        myFyle3.fill(' ');
+        myFyle3.width(40);
+        myFyle3<<left<<setw(10)<<"Vardas"<<left<<setw(10)<<"Pavarde"<<right<<setw(20)<<"Galutinis (vid.)"<<right<<setw(20)<<"Galutinis (Med.)"<<endl;
+        myFyle3.fill('-');
+        myFyle3.width(40);
+        myFyle3<<""<<endl;
+        myFyle3.fill(' ');
+        myFyle3.width(40);
+        myFyle3<<left<<setw(10)<<duomenys.v<<setw(10)<<duomenys.p<<right<<setw(20)<<duomenys.vidutinis<<right<<setw(20)<<endl;
+            for (mokinys duomenys : lievakai)
+        myFyle3 << setw(10) << left << duomenys.v << setw(10) << left << duomenys.vidutinis << setw(20) << right << setprecision(3) << duomenys.vid << endl;
+        myFyle3.close();
+
+
+                chrono::steady_clock::time_point end=chrono::steady_clock::now();
+                cout << "programos darbo laikas " << chrono::duration_cast<chrono::seconds>(end - begin).count() <<" sek"<<endl;
+}
            return 0;
-}}
+}}}
